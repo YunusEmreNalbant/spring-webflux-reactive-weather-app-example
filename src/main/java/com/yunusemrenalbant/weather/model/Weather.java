@@ -3,6 +3,7 @@ package com.yunusemrenalbant.weather.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Document(collection = "weathers")
@@ -33,62 +34,31 @@ public class Weather {
         this.responseLocalTime = responseLocalTime;
     }
 
-    public Weather() {
-    }
-
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getRequestedCityName() {
         return requestedCityName;
     }
 
-    public void setRequestedCityName(String requestedCityName) {
-        this.requestedCityName = requestedCityName;
-    }
-
     public String getCityName() {
         return cityName;
-    }
-
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
     }
 
     public String getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public Integer getTemperature() {
         return temperature;
-    }
-
-    public void setTemperature(Integer temperature) {
-        this.temperature = temperature;
     }
 
     public LocalDateTime getUpdatedTime() {
         return updatedTime;
     }
 
-    public void setUpdatedTime(LocalDateTime updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
     public LocalDateTime getResponseLocalTime() {
         return responseLocalTime;
-    }
-
-    public void setResponseLocalTime(LocalDateTime responseLocalTime) {
-        this.responseLocalTime = responseLocalTime;
     }
 }
