@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: weather
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: reactive-weather-app
+      host: localhost
+      port: 27017
+
+server:
+  port: 8081
+
+api:
+  key: 7529d1784940d22d1d97bf05a6e968c0
