@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: weather
@@ -9,9 +12,25 @@ spring:
       database: reactive-weather-app
       host: localhost
       port: 27017
+  config:
+    import: optional:file:.env[.properties]
 
-server:
-  port: 8081
+weather-stack:
+  api-url: ${API-URL:https://api.weatherstack.com/current}
+  api-key: ${API-KEY:default-key}
 
-api:
-  key: 7529d1784940d22d1d97bf05a6e968c0
+resilience4j:
+  ratelimiter:
+    instances:
+      basic:
+        limit-for-period: 10
+        limit-refresh-period: 1m
+        timeout-duration: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+          - prometheus
