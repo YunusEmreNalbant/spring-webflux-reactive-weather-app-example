@@ -34,3 +34,4 @@ build/
 .idea
 .mvn
 mongodb
+data/grafana
