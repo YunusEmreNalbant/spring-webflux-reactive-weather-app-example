@@ -40,6 +40,8 @@ Temel amaç, verimli ve ölçeklenebilir bir hava durumu servisi sağlamaktır.
 5. **Uygulamanın Çalıştırılması:**  
    `mvn spring-boot:run`
 
+![6.png](screnshoots/6.png)
+
 
 ## Kullanım
 
