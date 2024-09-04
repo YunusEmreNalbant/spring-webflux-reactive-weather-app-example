@@ -35,3 +35,4 @@ build/
 .mvn
 mongodb
 data/grafana
+.env
