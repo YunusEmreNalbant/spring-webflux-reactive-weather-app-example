@@ -25,7 +25,7 @@ Temel amaç, verimli ve ölçeklenebilir bir hava durumu servisi sağlamaktır.
 ### Adımlar
 
 1. **Proje Kopyalama:**  
-   `git clone https://github.com/kullaniciadi/proje-adi.git`
+   `git clone https://github.com/YunusEmreNalbant/spring-webflux-reactive-weather-app-example.git`
 
 2. **Bağımlılıkları Yükleme:**  
    `mvn clean install`
