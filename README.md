@@ -5,7 +5,7 @@ Bu proje, Spring Boot kullanılarak geliştirilen ve reactive programlama prensi
 ## Çalışma Mantığı
 
 1. **Cache Kontrolü**: Kullanıcının talep ettiği şehir için önce önbellekten (cache) veri kontrol edilir. Eğer önbellekte ilgili şehir için veri mevcutsa, bu veri doğrudan döndürülür.
-2. **Veritabanı Kontrolü**: Eğer önbellekte veri yoksa, veri tabanında son hava durumu kaydını arar. Eğer veri tabanında ilgili şehre ait veri bulunuyorsa ve bu veri son 60 dakika içinde güncellenmişse, kullanıcıya bu veriyi sunar.
+2. **Veritabanı Kontrolü**: Eğer önbellekte veri yoksa, veri tabanında son hava durumu kaydını arar. Veri tabanında ilgili şehre ait veri varsa ve bu veri son 60 dakika içinde güncellenmişse, bu veri kullanıcıya sunulur. Bu 60 dakikalık süre, WeatherStack API'ye gereksiz yere sorgu yapmaktan kaçınmak ve API'yi daha verimli kullanmak amacıyla belirlenmiştir.
 3. **API Sorgusu**: Eğer veri tabanında ilgili şehir için kayıt yoksa ya da kayıt 60 dakikadan daha eskiyse, WeatherStack API'ye yeni bir sorgu atılır. API'den alınan veri, veri tabanına kaydedilir ve kullanıcıya sunulur.
 
 ## Özellikler
