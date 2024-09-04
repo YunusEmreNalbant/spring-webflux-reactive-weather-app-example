@@ -16,8 +16,8 @@ spring:
     import: optional:file:.env[.properties]
 
 weather-stack:
-  api-url: ${API-URL:https://api.weatherstack.com/current}
-  api-key: ${API-KEY:default-key}
+  api-url: https://api.weatherstack.com/current
+  api-key: ${WEATHER_STACK_API_KEY}
 
 resilience4j:
   ratelimiter:

@@ -8,6 +8,7 @@ services:
     environment:
       - SPRING_DATA_MONGODB_HOST=mongodb
       - SPRING_DATA_MONGODB_DATABASE=reactive-weather-app
+      - "WEATHER_STACK_API_KEY=${WEATHER_STACK_API_KEY}"
     networks:
       - app-network
 
