@@ -17,7 +17,7 @@ Temel amaç, verimli ve ölçeklenebilir bir hava durumu servisi sağlamaktır.
 
 - **Spring Boot (Reactive WebFlux)**
 - **MongoDB**
-- **WeatherStack API**
+- **WeatherStack API (https://weatherstack.com/documentation)**
 - **Resilience4j (Rate Limiting)**
 - **Prometheus & Grafana**
 - **Docker**
