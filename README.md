@@ -1,8 +1,12 @@
 # Reactive WebFlux ve WeatherStack API ile Hava Durumu Sorgulama ☃️
 
-Bu proje, Spring Boot kullanılarak geliştirilen reactive programlama prensiplerini uygulayan Webflux kullanarak yapılmış bir hava durumu uygulamasıdır. Proje, WeatherStack API'si ile entegrasyon sağlayarak kullanıcının talep ettiği şehirlerin hava durumunu sunar.
-Uygulama, Reactive WebFlux, MongoDB, Prometheus, Grafana, Rate Limiting ve Docker gibi modern teknolojiler ile geliştirilmiştir.
-Temel amaç, verimli ve ölçeklenebilir bir hava durumu servisi sağlamaktır.
+Bu proje, Spring Boot kullanılarak geliştirilen ve reactive programlama prensiplerini uygulayan Webflux teknolojisi ile yapılmış bir hava durumu uygulamasıdır. Proje, WeatherStack API'si ile entegrasyon sağlayarak kullanıcının talep ettiği şehirlerin hava durumunu sunar.
+
+## Çalışma Mantığı
+
+1. **Cache Kontrolü**: Kullanıcının talep ettiği şehir için önce önbellekten (cache) veri kontrol edilir. Eğer önbellekte ilgili şehir için veri mevcutsa, bu veri doğrudan döndürülür.
+2. **Veritabanı Kontrolü**: Eğer önbellekte veri yoksa, veri tabanında son hava durumu kaydını arar. Eğer veri tabanında ilgili şehre ait veri bulunuyorsa ve bu veri son 60 dakika içinde güncellenmişse, kullanıcıya bu veriyi sunar.
+3. **API Sorgusu**: Eğer veri tabanında ilgili şehir için kayıt yoksa ya da kayıt 60 dakikadan daha eskiyse, WeatherStack API'ye yeni bir sorgu atılır. API'den alınan veri, veri tabanına kaydedilir ve kullanıcıya sunulur.
 
 ## Özellikler
 
